@@ -36,13 +36,13 @@ steps:
   displayName: 'Write build info'
   workingDirectory: Tailspin.SpaceGame.Web/wwwroot
 
-- task: DotNEtCoreCLI@2
+- task: DotNetCoreCLI@2
   displayName: 'Resote project dependencies'
   inputs:
     platform: 'restore'
     prpjects: '**/*.csproj'
 
-- task: DontNetCoreCLI@2
+- task: DotNetCoreCLI@2
   displayName: 'Build the project - Release'
   inputs:
     command: 'build'
